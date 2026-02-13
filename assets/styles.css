@@ -24,7 +24,7 @@ img{max-width:100%;display:block}
 .container{max-width:var(--max);margin:0 auto;padding:0 18px}
 .topbar .row{display:flex;gap:18px;align-items:center;justify-content:space-between;padding:14px 0}
 .brand{display:flex;gap:12px;align-items:center}
-.brand .mark{width:110px;height:110px;border-radius:999px;background:#fff;padding:6px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+
 .brand .title{display:flex;flex-direction:column;gap:2px}
 .brand .title strong{letter-spacing:.08em;text-transform:uppercase;font-size:.78rem;color:rgba(255,255,255,.85)}
 .brand .title span{font-size:1.2rem;font-weight:700}
@@ -107,9 +107,9 @@ img{max-width:100%;display:block}
 .disclaimer{margin-top:12px;color:var(--muted);font-size:.9rem}
 
 /* SEO/Brand update: larger centered logo */
-.brand .mark{width:110px;height:110px;border-radius:999px;background:#fff;padding:6px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+
 @media (max-width:780px){
-  .brand .mark{width:110px;height:110px;border-radius:999px;background:#fff;padding:6px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+  
 }
 
 
@@ -123,7 +123,7 @@ img{max-width:100%;display:block}
 @media (max-width: 780px){
   .topbar .row{flex-direction:column;align-items:center;gap:10px}
   .brand{flex-direction:column;align-items:center;text-align:center}
-  .brand .mark{width:96px;height:96px}
+  
   .brand .title strong{font-size:.72rem}
   .brand .title span{font-size:1.18rem}
   .nav{justify-content:center}
@@ -138,7 +138,7 @@ img{max-width:100%;display:block}
   .form input,.form select,.form textarea{font-size:16px} /* avoid iOS zoom */
 }
 @media (max-width: 420px){
-  .brand .mark{width:88px;height:88px}
+  
   .h1{font-size:1.72rem}
 }
 
@@ -154,28 +154,16 @@ img{max-width:100%;display:block}
   text-align: center;
 }
 
-.homepage .brand .mark {
-  width: 160px;
-  height: 160px;
-  padding: 8px;
-  margin-bottom: 8px;
-}
+.homepage 
 
 /* Mobile adjustments */
 @media (max-width: 780px) {
-  .homepage .brand .mark {
-    width: 130px;
-    height: 130px;
-  }
+  .homepage 
 }
 
 
 /* === Logo refinement: remove side white space & improve fit === */
-.brand .mark {
-  background: transparent;
-  padding: 0;
-  overflow: hidden;
-}
+
 
 .brand .mark img {
   width: 100%;
@@ -184,19 +172,10 @@ img{max-width:100%;display:block}
 }
 
 /* Homepage override keeps large size without padding */
-.homepage .brand .mark {
-  width: 160px;
-  height: 160px;
-  padding: 0;
-}
+.homepage 
 
 /* === Professional rectangular logo (no circle) === */
-.brand .mark {
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-  padding: 0;
-}
+
 
 .brand .mark img {
   object-fit: contain;
@@ -207,15 +186,10 @@ img{max-width:100%;display:block}
 
 
 /* === Homepage: extra-large logo (subpages unchanged) === */
-.homepage .brand .mark {
-  width: 220px;
-  height: auto;
-}
+.homepage 
 
 @media (max-width: 780px) {
-  .homepage .brand .mark {
-    width: 180px;
-  }
+  .homepage 
 }
 
 
@@ -223,9 +197,7 @@ img{max-width:100%;display:block}
 
 
 @media (max-width: 780px) {
-  .homepage .brand .mark {
-    width: 300px;
-  }
+  .homepage 
 }
 
 
@@ -251,8 +223,23 @@ img{max-width:100%;display:block}
 }
 
 /* === Ensure logo background stays transparent === */
-.brand .mark {
+
+
+/* === FINAL homepage logo fix: transparent bg + 30% larger === */
+.homepage .brand .mark,
+.homepage .brand .mark * {
   background: transparent !important;
-  padding: 0 !important;
   box-shadow: none !important;
+}
+
+.homepage .brand .mark {
+  padding: 0 !important;
+  width: 546px; /* ~30% larger than 420px */
+  height: auto !important;
+}
+
+@media (max-width: 780px) {
+  .homepage .brand .mark {
+    width: 390px;
+  }
 }
