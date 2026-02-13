@@ -235,3 +235,30 @@ img{max-width:100%;display:block}
     width: 300px;
   }
 }
+
+
+/* === Homepage: white logo + tagline === */
+
+/* Turn logo white ONLY on homepage */
+.homepage .brand img {
+  filter: brightness(0) invert(1);
+}
+
+/* Top-right tagline */
+.homepage .topbar .tagline {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-left: auto;
+}
+
+/* Mobile: center tagline under logo */
+@media (max-width: 780px) {
+  .homepage .topbar .tagline {
+    margin-left: 0;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+}
