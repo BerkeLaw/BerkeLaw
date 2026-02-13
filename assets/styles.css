@@ -168,3 +168,24 @@ img{max-width:100%;display:block}
     height: 130px;
   }
 }
+
+
+/* === Logo refinement: remove side white space & improve fit === */
+.brand .mark {
+  background: transparent;
+  padding: 0;
+  overflow: hidden;
+}
+
+.brand .mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Homepage override keeps large size without padding */
+.homepage .brand .mark {
+  width: 160px;
+  height: 160px;
+  padding: 0;
+}
