@@ -220,3 +220,18 @@ img{max-width:100%;display:block}
     width: 180px;
   }
 }
+
+
+/* === Homepage logo: DOUBLE size, minimal background === */
+.homepage .brand .mark {
+  width: 420px;
+  height: auto;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+@media (max-width: 780px) {
+  .homepage .brand .mark {
+    width: 300px;
+  }
+}
