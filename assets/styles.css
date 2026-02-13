@@ -189,3 +189,15 @@ img{max-width:100%;display:block}
   height: 160px;
   padding: 0;
 }
+
+/* === Professional rectangular logo (no circle) === */
+.brand .mark {
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.brand .mark img {
+  object-fit: contain;
+}
