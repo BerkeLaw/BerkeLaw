@@ -141,32 +141,30 @@ img{max-width:100%;display:block}
   .brand .mark{width:88px;height:88px}
   .h1{font-size:1.72rem}
 }
-/* === Homepage logo: large & centered (professional law firm style) === */
 
-/* Center the entire header block on the homepage only */
-body:has(.hero) .topbar .row {
+
+/* === Homepage logo: large & centered (final override) === */
+.homepage .topbar .row {
   justify-content: center;
 }
 
-/* Center brand stack */
-body:has(.hero) .brand {
+.homepage .brand {
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-/* Make logo clearly dominant */
-body:has(.hero) .brand .mark {
-  width: 150px;
-  height: 150px;
+.homepage .brand .mark {
+  width: 160px;
+  height: 160px;
   padding: 8px;
   margin-bottom: 8px;
 }
 
 /* Mobile adjustments */
 @media (max-width: 780px) {
-  body:has(.hero) .brand .mark {
-    width: 120px;
-    height: 120px;
+  .homepage .brand .mark {
+    width: 130px;
+    height: 130px;
   }
 }
