@@ -201,3 +201,9 @@ img{max-width:100%;display:block}
 .brand .mark img {
   object-fit: contain;
 }
+
+/* === Logo contrast enhancement === */
+.topbar .brand .mark {
+  background: rgba(255,255,255,0.92);
+  padding: 6px 10px;
+}
