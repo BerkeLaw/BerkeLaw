@@ -144,22 +144,11 @@ img{max-width:100%;display:block}
 
 
 /* === Homepage logo: large & centered (final override) === */
-.homepage .topbar .row {
-  justify-content: center;
-}
 
-.homepage .brand {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
 
-.homepage 
 
-/* Mobile adjustments */
-@media (max-width: 780px) {
-  .homepage 
-}
+
+
 
 
 /* === Logo refinement: remove side white space & improve fit === */
@@ -172,74 +161,49 @@ img{max-width:100%;display:block}
 }
 
 /* Homepage override keeps large size without padding */
-.homepage 
 
-/* === Professional rectangular logo (no circle) === */
-
-
-.brand .mark img {
-  object-fit: contain;
-}
 
 /* === Logo contrast enhancement === */
 
 
 
 /* === Homepage: extra-large logo (subpages unchanged) === */
-.homepage 
 
-@media (max-width: 780px) {
-  .homepage 
-}
 
 
 /* === Homepage logo: DOUBLE size, minimal background === */
 
 
 @media (max-width: 780px) {
-  .homepage 
-}
-
-
-/* === Homepage tagline (visible + responsive) === */
-.homepage .tagline {
-  margin-left: auto;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
+  
 
 @media (max-width: 780px) {
-  .homepage .tagline {
-    margin: 8px 0 0 0;
-    width: 100%;
-    text-align: center;
-    font-size: 0.85rem;
-    white-space: normal;
-  }
+  
 }
 
 /* === Ensure logo background stays transparent === */
 
 
 /* === FINAL homepage logo fix: transparent bg + 30% larger === */
-.homepage .brand .mark,
-.homepage .brand .mark * {
-  background: transparent !important;
-  box-shadow: none !important;
-}
 
-.homepage .brand .mark {
-  padding: 0 !important;
-  width: 546px; /* ~30% larger than 420px */
-  height: auto !important;
-}
+
+
 
 @media (max-width: 780px) {
-  .homepage .brand .mark {
-    width: 390px;
-  }
+  
+}
+
+
+/* === Uniform logo style & size across all pages === */
+.mark{
+  width: 546px;
+  height: auto;
+  padding: 0 !important;
+  max-width: 100%;
+  display: block;
+  background: transparent !important;
+}
+
+@media (max-width: 780px){
+  .mark{ width: 390px; }
 }
