@@ -203,10 +203,7 @@ img{max-width:100%;display:block}
 }
 
 /* === Logo contrast enhancement === */
-.topbar .brand .mark {
-  background: rgba(255,255,255,0.92);
-  padding: 6px 10px;
-}
+
 
 
 /* === Homepage: extra-large logo (subpages unchanged) === */
@@ -223,12 +220,7 @@ img{max-width:100%;display:block}
 
 
 /* === Homepage logo: DOUBLE size, minimal background === */
-.homepage .brand .mark {
-  width: 420px;
-  height: auto;
-  background: transparent !important;
-  padding: 0 !important;
-}
+
 
 @media (max-width: 780px) {
   .homepage .brand .mark {
@@ -256,4 +248,11 @@ img{max-width:100%;display:block}
     font-size: 0.85rem;
     white-space: normal;
   }
+}
+
+/* === Ensure logo background stays transparent === */
+.brand .mark {
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
 }
