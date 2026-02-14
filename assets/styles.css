@@ -213,7 +213,7 @@ img{max-width:100%;display:block}
 .brand { gap: 12px; }
 
 
-/* === Reduce dark top section height by ~30% === */
+
 /* Header / top bar */
 .topbar{
   padding-top: 10px !important;
@@ -236,4 +236,50 @@ img{max-width:100%;display:block}
 @media (max-width: 780px){
   .topbar{padding-top: 8px !important; padding-bottom: 8px !important;}
   .hero{padding-top: 28px !important; padding-bottom: 18px !important;}
+}
+
+
+/* === Uniform compact dark header/top sections (much smaller) === */
+:root{
+  --topbar-pad-y: 6px;
+  --nav-pad-y: 4px;
+  --hero-pad-top: 18px;
+  --hero-pad-bottom: 14px;
+  --header-gap: 8px;
+}
+
+/* Dark header area */
+.topbar{
+  padding-top: var(--topbar-pad-y) !important;
+  padding-bottom: var(--topbar-pad-y) !important;
+}
+
+/* Header row spacing */
+.topbar .row{
+  gap: var(--header-gap) !important;
+}
+
+/* Navigation strip (if present) */
+.nav{
+  padding-top: var(--nav-pad-y) !important;
+  padding-bottom: var(--nav-pad-y) !important;
+}
+
+/* Hero section */
+.hero{
+  padding-top: var(--hero-pad-top) !important;
+  padding-bottom: var(--hero-pad-bottom) !important;
+}
+
+/* Ensure consistent spacing across all pages even if some pages omit hero */
+main{ padding-top: 0 !important; }
+
+@media (max-width: 780px){
+  :root{
+    --topbar-pad-y: 6px;
+    --nav-pad-y: 4px;
+    --hero-pad-top: 14px;
+    --hero-pad-bottom: 12px;
+    --header-gap: 8px;
+  }
 }
