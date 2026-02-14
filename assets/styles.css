@@ -143,13 +143,6 @@ img{max-width:100%;display:block}
 }
 
 
-/* === Homepage logo: large & centered (final override) === */
-
-
-
-
-
-
 
 /* === Logo refinement: remove side white space & improve fit === */
 
@@ -167,19 +160,7 @@ img{max-width:100%;display:block}
 
 
 
-/* === Homepage: extra-large logo (subpages unchanged) === */
 
-
-
-/* === Homepage logo: DOUBLE size, minimal background === */
-
-
-@media (max-width: 780px) {
-  
-
-@media (max-width: 780px) {
-  
-}
 
 /* === Ensure logo background stays transparent === */
 
@@ -239,14 +220,6 @@ img{max-width:100%;display:block}
 }
 
 
-/* === Uniform compact dark header/top sections (much smaller) === */
-:root{
-  --topbar-pad-y: 6px;
-  --nav-pad-y: 4px;
-  --hero-pad-top: 18px;
-  --hero-pad-bottom: 14px;
-  --header-gap: 8px;
-}
 
 /* Dark header area */
 .topbar{
@@ -282,4 +255,35 @@ main{ padding-top: 0 !important; }
     --hero-pad-bottom: 12px;
     --header-gap: 8px;
   }
+}
+
+
+/* === STRICT uniform header/nav/hero sizing (smaller + consistent) === */
+.topbar{ padding: 4px 0 !important; }
+.nav{ padding: 4px 0 !important; }
+.topbar .row{ gap: 6px !important; }
+
+/* Uniform logo size everywhere */
+.brand .mark{
+  width: 180px !important;
+  height: auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+/* If .mark is used on the img itself */
+.brand img.mark{
+  width: 180px !important;
+  height: auto !important;
+}
+
+/* Reduce hero (homepage only section) to avoid tall top area */
+.hero{ padding: 14px 0 12px !important; }
+
+@media (max-width: 780px){
+  .topbar{ padding: 4px 0 !important; }
+  .nav{ padding: 3px 0 !important; }
+  .brand .mark, .brand img.mark{ width: 140px !important; }
+  .hero{ padding: 10px 0 10px !important; }
 }
