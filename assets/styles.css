@@ -304,32 +304,6 @@ main{ padding-top: 0 !important; }
 
 /* === Homepage: place headshot in upper-right header (no layout change below) === */
 .homepage .topbar .row{align-items:center;}
-.homepage .header-headshot-wrap{
-  margin-left:auto;
-  display:flex;
-  align-items:center;
-  justify-content:flex-end;
-}
-.homepage .header-headshot{
-  height:92px; /* fits entirely within header row */
-  width:auto;
-  max-width:160px;
-  object-fit:contain; /* shows entire image (no crop) */
-  border-radius:14px;
-  background:transparent;
-  border:1px solid rgba(255,255,255,.18);
-  box-shadow:0 10px 24px rgba(0,0,0,.18);
-}
-
-/* Mobile: shrink headshot and center */
-@media (max-width: 780px){
-  .homepage .header-headshot-wrap{margin-left:0; justify-content:center; width:100%;}
-  .homepage .header-headshot{height:74px; max-width:140px;}
-}
-
-
-@media (max-width: 780px){
-  .homepage .header-headshot{height: 72px; max-width: 150px;}
 }
 
 }
@@ -337,38 +311,7 @@ main{ padding-top: 0 !important; }
 
 /* === Homepage header headshot: full header height (topbar navy to white boundary) === */
 .homepage header.topbar{ position: relative; }
-.homepage .header-headshot-wrap{
-  position:absolute;
-  top:0;
-  bottom:0;              /* span full header height */
-  right:18px;
-  display:flex;
-  align-items:stretch;
-  justify-content:flex-end;
-  pointer-events:none;   /* avoid blocking clicks */
-}
 .homepage .header-headshot{
-  height:100%;
-  width:auto;
-  max-width:286px;       /* keep from taking over */
-  object-fit:contain;    /* show entire image */
-  border-radius:0;       /* flush to header edges */
-  border:0 !important;
-  background:transparent !important;
-}
-
-/* Make room so nav links don't collide */
-@media (min-width: 781px){
-  .homepage .topbar .container{ padding-right: 320px; }
-}
-@media (max-width: 780px){
-  .homepage .header-headshot-wrap{
-    position:static;     /* on mobile, keep it in flow */
-    width:100%;
-    justify-content:center;
-    pointer-events:auto;
-  }
-  .homepage .header-headshot{
     height:84px;
     max-width:180px;
     border-radius:14px;
@@ -378,16 +321,53 @@ main{ padding-top: 0 !important; }
 
 
 /* === Homepage header headshot: enlarge the person image === */
-.homepage .header-headshot-wrap{
-  overflow: visible;
 }
+
+
+/* === Homepage header headshot: force upper-right (desktop + mobile) === */
+.homepage header.topbar{ position: relative; }
+
+.homepage .header-headshot-wrap{
+  position:absolute !important;
+  top:0 !important;
+  right:18px !important;
+  height:100% !important;
+  display:flex !important;
+  align-items:flex-start !important;   /* keep at the top */
+  justify-content:flex-end !important;
+  margin:0 !important;
+  padding:0 !important;
+  pointer-events:none;
+  overflow: visible;
+  z-index: 3;
+}
+
 .homepage .header-headshot{
+  height:100% !important;              /* spans header height */
+  width:auto !important;
+  max-width:360px !important;
+  object-fit:contain !important;
+  border:0 !important;
+  background:transparent !important;
+  border-radius:0 !important;
   transform: scale(1.3);
   transform-origin: right top;
 }
+
+/* Reserve space for nav links so they don't sit under the image */
 @media (min-width: 781px){
-  .homepage .topbar .container{ padding-right: 390px; } /* reserve space for bigger image */
+  .homepage .topbar .container{ padding-right: 420px !important; }
 }
+
+/* Mobile: still upper-right, but smaller so it fits */
 @media (max-width: 780px){
-  .homepage .header-headshot{ transform: scale(1.15); transform-origin: center top; }
+  .homepage .header-headshot-wrap{ right:12px !important; }
+  .homepage .header-headshot{
+    height:100% !important;
+    max-width:220px !important;
+    transform: scale(1.05);
+    transform-origin: right top;
+    border-radius:0 !important;
+  }
+  .homepage .topbar .container{ padding-right: 240px !important; }
 }
