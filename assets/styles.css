@@ -373,3 +373,34 @@ main{ padding-top: 0 !important; }
 }
 
 .homepage .header-headshot{ object-position: right top !important; }
+
+
+/* === Homepage header headshot: clip strictly within blue header === */
+.homepage header.topbar{
+  position: relative !important;
+  overflow: hidden !important; /* prevents image from spilling into white content */
+}
+
+.homepage .header-headshot-wrap{
+  position: absolute !important;
+  top: 0 !important;
+  right: 18px !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: stretch !important;
+  justify-content: flex-end !important;
+  overflow: hidden !important; /* clip inside wrapper too */
+  pointer-events: none;
+}
+
+.homepage .header-headshot{
+  height: 100% !important;
+  width: auto !important;
+  max-width: 260px !important;
+  object-fit: contain !important;
+  object-position: right top !important;
+  transform: none !important; /* ensure no scaling pushes it outside header */
+  border: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+}
