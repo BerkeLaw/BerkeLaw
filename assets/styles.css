@@ -313,7 +313,7 @@ main{ padding-top: 0 !important; }
 .homepage header.topbar{ position: relative; }
 .homepage .header-headshot{
     height:84px;
-    max-width:180px;
+    max-width:260px;
     border-radius:14px;
   }
   .homepage .topbar .container{ padding-right: 18px; }
@@ -345,18 +345,18 @@ main{ padding-top: 0 !important; }
 .homepage .header-headshot{
   height:100% !important;              /* spans header height */
   width:auto !important;
-  max-width:180px !important;
+  max-width:260px !important;
   object-fit:contain !important;
   border:0 !important;
   background:transparent !important;
   border-radius:0 !important;
-  transform: scale(0.455);
+  transform: scale(1.0);
   transform-origin: right top;
 }
 
 /* Reserve space for nav links so they don't sit under the image */
 @media (min-width: 781px){
-  .homepage .topbar .container{ padding-right: 210px !important; }
+  .homepage .topbar .container{ padding-right: 300px !important; }
 }
 
 /* Mobile: still upper-right, but smaller so it fits */
@@ -365,7 +365,7 @@ main{ padding-top: 0 !important; }
   .homepage .header-headshot{
     height:100% !important;
     max-width:220px !important;
-    transform: scale(0.6);
+    transform: scale(0.85);
     transform-origin: right top;
     border-radius:0 !important;
   }
