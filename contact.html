@@ -62,10 +62,7 @@
     <div class="grid2" style="margin-top:16px">
       <div class="card pad">
         <h2>Submission Form</h2>
-
-        <div class="alert" id="formAlert" role="status" aria-live="polite"></div>
-
-        <!--
+<!--
           EMAIL DELIVERY OPTIONS (choose one):
 
           Option A (recommended for a static GitHub Pages site): Formspree
@@ -75,13 +72,14 @@
 
           Option B: Netlify Forms
           1) Deploy on Netlify
-          2) Add netlify attribute to <form> and configure notifications to your email
+          2) Add netlify attribute to <form>   <input type="text" name="_gotcha" style="display:none">
+and configure notifications to your email
 
           Option C: Serverless function (advanced)
           1) Use a backend (Netlify/Vercel/AWS) to send mail via an email API (SendGrid/Mailgun/etc).
         -->
 
-        <form class="form" id="intakeForm" method="POST" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID">
+        <form class="form" id="intakeForm" method="POST" action="https://formspree.io/f/mbdagvbk">
           <div class="row2">
             <div>
               <label for="name">Full Name</label>
@@ -150,32 +148,7 @@
   </div>
 </section>
 
-<script>
-  // Progressive enhancement: show a helpful message if Formspree action is not configured
-  (function(){
-    const form = document.getElementById('intakeForm');
-    const alertBox = document.getElementById('formAlert');
-    if(!form || !alertBox) return;
 
-    if(form.action.includes('REPLACE_WITH_YOUR_FORM_ID')){
-      alertBox.classList.add('show');
-      alertBox.innerHTML = '<strong>Setup required:</strong> Replace the form action URL with your Formspree endpoint (or deploy with Netlify Forms) so submissions are emailed to <strong>jasonrossberke@gmail.com</strong>.';
-    }
-
-    form.addEventListener('submit', function(e){
-      // basic client-side guardrails
-      const name = document.getElementById('name')?.value?.trim();
-      const email = document.getElementById('email')?.value?.trim();
-      const service = document.getElementById('service')?.value?.trim();
-      const message = document.getElementById('message')?.value?.trim();
-      if(!name || !email || !service || !message){
-        e.preventDefault();
-        alertBox.classList.add('show');
-        alertBox.textContent = 'Please complete all required fields before submitting.';
-      }
-    });
-  })();
-</script>
 
 </main>
 
