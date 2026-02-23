@@ -371,3 +371,5 @@ main{ padding-top: 0 !important; }
   }
   .homepage .topbar .container{ padding-right: 240px !important; }
 }
+
+.homepage .header-headshot{ object-position: right top !important; }
