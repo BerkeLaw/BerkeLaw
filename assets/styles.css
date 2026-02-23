@@ -332,17 +332,62 @@ main{ padding-top: 0 !important; }
   .homepage .header-headshot{height: 72px; max-width: 150px;}
 }
 
-/* === Homepage header headshot: navy-matched background + white silhouette outline === */
+}
+
+
+/* === Homepage header headshot: full header height (topbar navy to white boundary) === */
+.homepage header.topbar{ position: relative; }
+.homepage .header-headshot-wrap{
+  position:absolute;
+  top:0;
+  bottom:0;              /* span full header height */
+  right:18px;
+  display:flex;
+  align-items:stretch;
+  justify-content:flex-end;
+  pointer-events:none;   /* avoid blocking clicks */
+}
 .homepage .header-headshot{
-  height: 88px;
-  width: auto;
-  max-width: 180px;
-  object-fit: contain;
-  border-radius: 14px;
-  border: 0 !important;          /* remove rectangle border */
-  background: transparent !important; /* background shows header navy through transparency */
-  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+  height:100%;
+  width:auto;
+  max-width:286px;       /* keep from taking over */
+  object-fit:contain;    /* show entire image */
+  border-radius:0;       /* flush to header edges */
+  border:0 !important;
+  background:transparent !important;
+}
+
+/* Make room so nav links don't collide */
+@media (min-width: 781px){
+  .homepage .topbar .container{ padding-right: 320px; }
 }
 @media (max-width: 780px){
-  .homepage .header-headshot{height: 72px; max-width: 150px;}
+  .homepage .header-headshot-wrap{
+    position:static;     /* on mobile, keep it in flow */
+    width:100%;
+    justify-content:center;
+    pointer-events:auto;
+  }
+  .homepage .header-headshot{
+    height:84px;
+    max-width:180px;
+    border-radius:14px;
+  }
+  .homepage .topbar .container{ padding-right: 18px; }
+}
+
+
+/* === Homepage header headshot: enlarge the person image === */
+.homepage .header-headshot-wrap{
+  overflow: visible;
+}
+.homepage .header-headshot{
+  transform: scale(1.3);
+  transform-origin: right top;
+}
+@media (min-width: 781px){
+  .homepage .topbar .container{ padding-right: 390px; } /* reserve space for bigger image */
+}
+@media (max-width: 780px){
+  .homepage .header-headshot{ transform: scale(1.15); transform-origin: center top; }
 }
