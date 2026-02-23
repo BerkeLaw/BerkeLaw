@@ -287,3 +287,62 @@ main{ padding-top: 0 !important; }
   .brand .mark, .brand img.mark{ width: 140px !important; }
   .hero{ padding: 10px 0 10px !important; }
 }
+
+
+.homepage .office-headshot{
+  width:100%;
+  height:auto;
+  border-radius:14px;
+  border:1px solid var(--border);
+  background:#fff;
+  display:block;
+  margin:10px 0 12px;
+}
+
+
+
+
+/* === Homepage: place headshot in upper-right header (no layout change below) === */
+.homepage .topbar .row{align-items:center;}
+.homepage .header-headshot-wrap{
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+}
+.homepage .header-headshot{
+  height:92px; /* fits entirely within header row */
+  width:auto;
+  max-width:160px;
+  object-fit:contain; /* shows entire image (no crop) */
+  border-radius:14px;
+  background:transparent;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 10px 24px rgba(0,0,0,.18);
+}
+
+/* Mobile: shrink headshot and center */
+@media (max-width: 780px){
+  .homepage .header-headshot-wrap{margin-left:0; justify-content:center; width:100%;}
+  .homepage .header-headshot{height:74px; max-width:140px;}
+}
+
+
+@media (max-width: 780px){
+  .homepage .header-headshot{height: 72px; max-width: 150px;}
+}
+
+/* === Homepage header headshot: navy-matched background + white silhouette outline === */
+.homepage .header-headshot{
+  height: 88px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  border-radius: 14px;
+  border: 0 !important;          /* remove rectangle border */
+  background: transparent !important; /* background shows header navy through transparency */
+  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+}
+@media (max-width: 780px){
+  .homepage .header-headshot{height: 72px; max-width: 150px;}
+}
