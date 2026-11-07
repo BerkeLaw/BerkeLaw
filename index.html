@@ -27,11 +27,6 @@
 
 <a class="skip" href="#main">Skip to content</a>
 <header class="topbar">
-  <div class="addressbar">
-    <div class="container">
-      <p class="office-address">125-10 Queens Blvd, Suite 222, Kew Gardens, NY 11415</p>
-    </div>
-  </div>
   <div class="container">
     <div class="row">
       <div class="brand">
@@ -40,6 +35,7 @@
           <span class="brand-text">
             <span class="brand-kicker">Law Offices of</span>
             <span class="brand-name">Jason Berke PC</span>
+            <span class="brand-address">125-10 Queens Blvd, Suite 222, Kew Gardens, NY 11415</span>
           </span>
         </a>
       </div>
@@ -138,10 +134,73 @@
       <div class="card pad">
         <h2>Consultation Request</h2>
         <p>
-          Use our secure inquiry form to send your contact information and a short summary of the legal issue.
-          <a href="contact.html"><strong>Start here</strong></a>.
+          Use the form below to send your contact information and a short summary of the legal issue.
+          <a href="#consultation"><strong>Go to the form</strong></a>.
         </p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="consultation" aria-labelledby="consultation-heading">
+  <div class="container">
+    <h2 class="h1" id="consultation-heading" style="margin-top:0">Consultation Request</h2>
+    <p class="lede">
+      Send your contact information and a short summary of your legal issue. We will follow up to discuss next steps.
+      <strong>Do not include confidential information</strong> until an engagement is confirmed.
+    </p>
+
+    <div class="card pad" style="margin-top:16px">
+      <form class="form" id="homeIntakeForm" method="POST" action="https://formspree.io/f/mbdagvbk">
+        <div class="row2">
+          <div>
+            <label for="home-name">Full Name</label>
+            <input id="home-name" name="name" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="home-email">Email</label>
+            <input id="home-email" name="email" type="email" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="row2">
+          <div>
+            <label for="home-phone">Phone</label>
+            <input id="home-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div>
+            <label for="home-service">Service Needed</label>
+            <select id="home-service" name="service" required>
+              <option value="" selected disabled>Select…</option>
+              <option>Title Dispute</option>
+              <option>Partition Case</option>
+              <option>Residential Eviction</option>
+              <option>Commercial Eviction</option>
+              <option>Yellowstone Injunction</option>
+              <option>Holdover Proceeding</option>
+              <option>Nonpayment Proceeding</option>
+              <option>Real Estate Contract Dispute</option>
+              <option>Other Civil Litigation</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="home-message">Brief Description</label>
+          <textarea id="home-message" name="message" placeholder="Include key facts, parties involved, where the property is located, and any deadlines. Please do not include confidential information." required></textarea>
+        </div>
+
+        <input type="hidden" name="_subject" value="New Website Intake Submission - Law Offices of Jason Berke PC">
+        <input type="hidden" name="_replyto" value="%email%">
+
+        <div class="actions">
+          <button class="btn primary" type="submit">Submit</button>
+          <a class="btn" href="mailto:jasonrossberke@gmail.com?subject=Consultation%20Request%20-%20Law%20Offices%20of%20Jason%20Berke%20PC">Email Instead</a>
+        </div>
+        <div class="note">
+          By submitting, you understand that no attorney–client relationship is formed by this request alone.
+        </div>
+      </form>
     </div>
   </div>
 </section>
