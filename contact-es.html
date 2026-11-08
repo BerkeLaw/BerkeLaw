@@ -96,6 +96,11 @@ and configure notifications to your email
         -->
 
         <form class="form" id="intakeForm" method="POST" action="https://formspree.io/f/mbdagvbk">
+          <div class="actions">
+            <strong>¿Tiene una audiencia o un plazo urgente?</strong>
+            <a class="btn" href="tel:+17187932488">Llame al (718) 793-2488, ext. 104</a>
+          </div>
+
           <div class="row2">
             <div>
               <label for="name">Nombre completo</label>
@@ -133,8 +138,13 @@ and configure notifications to your email
           </div>
 
           <div>
+            <label for="deadline">Próxima fecha de audiencia o plazo (opcional)</label>
+            <input id="deadline" name="court_date_or_deadline" type="date">
+          </div>
+
+          <div>
             <label for="message">Descripción breve</label>
-            <textarea id="message" name="message" placeholder="Incluya los hechos clave, las partes involucradas, dónde está la propiedad y cualquier plazo. No incluya información confidencial." required></textarea>
+            <textarea id="message" name="message" placeholder="Incluya los hechos clave, las partes involucradas, dónde está la propiedad y cualquier otro plazo. No incluya información confidencial." required></textarea>
           </div>
 
           <input type="hidden" name="_subject" value="New Website Intake Submission - Law Offices of Jason Berke PC">
@@ -146,7 +156,7 @@ and configure notifications to your email
             <a class="btn" href="mailto:jasonrossberke@gmail.com?subject=Consultation%20Request%20-%20Law%20Offices%20of%20Jason%20Berke%20PC">Enviar por correo</a>
           </div>
           <div class="note">
-            Al enviar este formulario, usted entiende que esta solicitud por sí sola no crea una relación abogado-cliente. El formulario se envía a través de Formspree, un servicio de terceros, para que podamos recibir su nombre, correo electrónico, número de teléfono y mensaje, y comunicarnos sobre una consulta. No incluya información confidencial hasta que se confirme un acuerdo de representación.
+            Al enviar este formulario, usted entiende que esta solicitud por sí sola no crea una relación abogado-cliente. La información que ingrese se envía a través de Formspree, un servicio de terceros, para que podamos comunicarnos con usted sobre una consulta. No incluya información confidencial hasta que se confirme un acuerdo de representación.
           </div>
         </form>
       </div>
@@ -160,8 +170,7 @@ and configure notifications to your email
         <p><strong>Correo:</strong><br><a href="mailto:jasonrossberke@gmail.com">jasonrossberke@gmail.com</a></p>
         <div style="height:14px"></div>
         <p class="small">
-          Si tiene una fecha de tribunal próxima, un aviso de desalojo o un plazo urgente,
-          indíquelo en la descripción para que podamos dar prioridad al seguimiento.
+          Si recibió un aviso de desalojo, menciónelo en la descripción para que podamos dar prioridad al seguimiento.
         </p>
       </div>
     </div>

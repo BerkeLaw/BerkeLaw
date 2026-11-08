@@ -96,6 +96,11 @@ and configure notifications to your email
         -->
 
         <form class="form" id="intakeForm" method="POST" action="https://formspree.io/f/mbdagvbk">
+          <div class="actions">
+            <strong>Urgent court date or deadline?</strong>
+            <a class="btn" href="tel:+17187932488">Call (718) 793-2488, ext. 104</a>
+          </div>
+
           <div class="row2">
             <div>
               <label for="name">Full Name</label>
@@ -133,8 +138,13 @@ and configure notifications to your email
           </div>
 
           <div>
+            <label for="deadline">Next court date or deadline (optional)</label>
+            <input id="deadline" name="court_date_or_deadline" type="date">
+          </div>
+
+          <div>
             <label for="message">Brief Description</label>
-            <textarea id="message" name="message" placeholder="Include key facts, parties involved, where the property is located, and any deadlines. Please do not include confidential information." required></textarea>
+            <textarea id="message" name="message" placeholder="Include key facts, the parties involved, where the property is located, and any other deadlines. Please do not include confidential information." required></textarea>
           </div>
 
           <input type="hidden" name="_subject" value="New Website Intake Submission - Law Offices of Jason Berke PC">
@@ -146,7 +156,7 @@ and configure notifications to your email
             <a class="btn" href="mailto:jasonrossberke@gmail.com?subject=Consultation%20Request%20-%20Law%20Offices%20of%20Jason%20Berke%20PC">Email Instead</a>
           </div>
           <div class="note">
-            By submitting, you understand that no attorney–client relationship is formed by this request alone. This form is sent through Formspree, a third-party service, so we can receive your name, email, phone number, and message and follow up about a consultation. Please do not include confidential information until an engagement is confirmed.
+            By submitting, you understand that no attorney–client relationship is formed by this request alone. The information you enter is sent through Formspree, a third-party service, so we can follow up about a consultation. Please do not include confidential information until an engagement is confirmed.
           </div>
         </form>
       </div>
@@ -160,8 +170,7 @@ and configure notifications to your email
         <p><strong>Email:</strong><br><a href="mailto:jasonrossberke@gmail.com">jasonrossberke@gmail.com</a></p>
         <div style="height:14px"></div>
         <p class="small">
-          If you have an upcoming court date, eviction notice, or time-sensitive deadline,
-          note it in the description so we can prioritize follow-up.
+          If you received an eviction notice, mention it in your description so we can prioritize follow-up.
         </p>
       </div>
     </div>
