@@ -35,8 +35,7 @@
     form.append(source);
   }
 
-  // Set this to the Website ID from the firm's private Umami dashboard.
-  const websiteId = '';
+  const websiteId = '331b5c6f-8ef5-42b6-8dc0-e1253c2ae40b';
   if (!websiteId || location.hostname !== canonical.hostname) return;
 
   const tracker = document.createElement('script');
