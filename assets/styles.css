@@ -320,6 +320,9 @@ img{max-width:100%;display:block}
   box-shadow:var(--shadow);
 }
 .answer p{margin:0;color:var(--ink)}
+.prose .guide-contact{margin:18px 0}
+.prose .guide-contact p{margin:0}
+.guide-contact .ctas{margin-top:12px}
 .byline{font-size:.92rem;color:var(--muted);margin:6px 0 0}
 .table-wrap{overflow-x:auto;margin:12px 0 18px}
 .table-wrap table{width:100%;border-collapse:collapse;font-size:.95rem;background:#fff}
@@ -357,6 +360,14 @@ img{max-width:100%;display:block}
   .section{padding:36px 0}
   .ctas{gap:10px}
   .btn{width:100%}
+  .home-actions .btn:not(.primary){
+    width:auto;
+    padding:8px 0;
+    border:0;
+    background:transparent;
+    text-decoration:underline;
+  }
+  .home-actions .btn:not(.primary):last-child{margin-left:6px}
   .form input,.form select,.form textarea{font-size:16px}
 }
 
