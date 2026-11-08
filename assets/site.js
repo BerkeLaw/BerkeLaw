@@ -7,8 +7,10 @@
 })();
 
 (function () {
-  const canonical = document.querySelector('link[rel="canonical"]');
-  if (!canonical || canonical.hostname !== 'www.queenseviction.com') return;
+  const canonicalLink = document.querySelector('link[rel="canonical"]');
+  if (!canonicalLink?.href) return;
+  const canonical = new URL(canonicalLink.href);
+  if (canonical.hostname !== 'www.queenseviction.com') return;
 
   const isSitePath = (path) => /^\/(?:[a-z0-9-]+\.html)?$/.test(path);
   const page = canonical.pathname;
