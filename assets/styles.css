@@ -205,6 +205,23 @@ img{max-width:100%;display:block}
 .btn.primary:hover{background:#143056;text-decoration:none}
 .btn:hover{border-color:#c9c2b6;text-decoration:none}
 
+.live-chat-label{
+  position:fixed;
+  right:calc(88px + env(safe-area-inset-right, 0px));
+  bottom:calc(20px + env(safe-area-inset-bottom, 0px));
+  z-index:1000;
+  max-width:min(182px, calc(100vw - 104px));
+  min-height:44px;
+  padding:6px 12px;
+  border:1px solid #fff;
+  border-radius:18px;
+  background:var(--navy);
+  color:#fff;
+  font:700 .92rem/1.15 var(--sans);
+  box-shadow:var(--shadow);
+  cursor:pointer;
+}
+
 .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
 .card.pad{padding:22px}
 .card h2{margin:0 0 12px;font-size:1.25rem}
