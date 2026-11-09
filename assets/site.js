@@ -7,7 +7,7 @@
 })();
 
 (function () {
-  const serviceSelect = document.querySelector('#intakeForm select[name="service"]');
+  const serviceSelect = document.querySelector('#intakeForm select[name="service"], #homeIntakeForm select[name="service"]');
   if (!serviceSelect || serviceSelect.value) return;
 
   const serviceKey = new URLSearchParams(location.search).get('service');
