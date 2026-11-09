@@ -7,6 +7,17 @@
 })();
 
 (function () {
+  const serviceSelect = document.querySelector('#intakeForm select[name="service"]');
+  if (!serviceSelect || serviceSelect.value) return;
+
+  const serviceKey = new URLSearchParams(location.search).get('service');
+  if (!serviceKey) return;
+
+  const option = Array.from(serviceSelect.options).find((item) => item.dataset.serviceKey === serviceKey);
+  if (option) serviceSelect.value = option.value;
+})();
+
+(function () {
   const canonicalLink = document.querySelector('link[rel="canonical"]');
   if (!canonicalLink?.href) return;
   const canonical = new URL(canonicalLink.href);
