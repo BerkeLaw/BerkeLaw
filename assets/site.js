@@ -53,7 +53,13 @@
   tracker.async = true;
   tracker.src = 'https://cloud.umami.is/script.js';
   tracker.dataset.websiteId = websiteId;
+  // Send canonical page paths explicitly so query strings and fragments stay private.
   tracker.dataset.autoTrack = 'false';
+  tracker.addEventListener('load', () => window.umami?.track({
+    website: websiteId,
+    hostname: canonical.hostname,
+    url: page,
+  }), { once: true });
 
   function recordInquiry(name) {
     const send = () => window.umami?.track({
